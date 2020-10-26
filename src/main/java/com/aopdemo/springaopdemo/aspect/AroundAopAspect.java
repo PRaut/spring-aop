@@ -13,7 +13,7 @@ public class AroundAopAspect
 {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-		@Around(value = "com.aopdemo.springaopdemo.aspect.CommonJoinPointAspect.businessLayerExecution()")
+		@Around(value = "com.aopdemo.springaopdemo.aspect.CommonJoinPointAspect.trackTimeAnnotation()")
 		public void afterReturning(ProceedingJoinPoint joinPoint) throws Throwable{
 			long startTime = System.currentTimeMillis();
 			

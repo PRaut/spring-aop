@@ -21,4 +21,7 @@ public class CommonJoinPointAspect
 	//Executes all lines within data layer
 	@Pointcut("within(com.aopdemo.springaopdemo.data..*)")
 	public void withinDataLayer() {}
+	
+	@Pointcut("@annotation(com.aopdemo.springaopdemo.aspect.TrackTime)")
+	public void trackTimeAnnotation() {}
 }

@@ -16,7 +16,8 @@ public class AfterAopAspect
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	// AfterReturning will get executed when only execution gets completed
-		@AfterReturning(value = "execution(* com.aopdemo.springaopdemo.business.*.*(..))", returning = "result")
+		@AfterReturning(value = "com.aopdemo.springaopdemo.aspect.CommonJoinPointAspect.businessLayerExecution()",
+				returning = "result")
 		public void afterReturning(JoinPoint joinPoint, Object result){
 			//Advice
 			logger.info("{} returned value {}", joinPoint, result);

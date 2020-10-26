@@ -17,4 +17,8 @@ public class CommonJoinPointAspect
 	//For bean name Pointcut - Matched Bean name contains Dao
 	@Pointcut("bean(*Dao*)")
 	public void beanContainingDao() {}
+	
+	//Executes all lines within data layer
+	@Pointcut("within(com.aopdemo.springaopdemo.data..*)")
+	public void withinDataLayer() {}
 }
